@@ -1,6 +1,6 @@
 import { Button, Card } from "flowbite-react";
 import Image from "next/image";
-import { GetAskingQuestions, GetSum } from "./services/DataService"
+import { GetAskingQuestions, GetGreaterOrLess, GetHelloName, GetMadLib, GetMagic8Ball, GetOddOrEven, GetRestaurant, GetReverseAlpha, GetReverseNum, GetSum } from "./services/DataService"
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
@@ -8,6 +8,15 @@ export default function Home() {
         <h1>Welcome to the main page starting here!</h1>
         <p>{GetSum(3,5)}</p>
         <p>{GetAskingQuestions("Daniel", 3)}</p>
+        <p>{GetGreaterOrLess(5,52)}</p>
+        <p>{GetHelloName("Daniel")}</p>
+        <br />
+        <p>{GetMadLib("Dan", "DMV", "Silly", "Gator", "Sad")}</p><br />
+        <p>{GetMagic8Ball("Yes?")}</p>
+        <p>{GetOddOrEven(5)}</p>
+        <p>{GetRestaurant("burger")}</p>
+        <p>{GetReverseAlpha("qwerty")}</p>
+        <p>{GetReverseNum("234561")}</p>
         
     <Card className="max-w-sm  dark:bg-[#FFF1E8]">
       <h5 className="text-2xl text-[#1F2B2D]  tracking-tight ">
