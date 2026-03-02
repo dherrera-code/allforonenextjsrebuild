@@ -3,9 +3,17 @@ import Image from "next/image";
 import { GetAskingQuestions, GetGreaterOrLess, GetHelloName, GetMadLib, GetMagic8Ball, GetOddOrEven, GetRestaurant, GetReverseAlpha, GetReverseNum, GetSum } from "./services/DataService"
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
+    <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
       <main className="text-black">
-        <h1>Welcome to the main page starting here!</h1>
+
+      <div className="px-5 sm:px-20 md:px-40">
+        <h1 className="text-[36px] text-center py-8">All For One!</h1>
+
+        <p className="text-center">Here are the first 10 applications I learned to create in the CodeStack Academy! These 10 projects are all using API endpoints that I created and hosted via Azure! Please enjoy playing with all of my projects!</p>
+
+      </div>
+
+        {/* <h1>Welcome to the main page starting here!</h1>
         <p>{GetSum(3,5)}</p>
         <p>{GetAskingQuestions("Daniel", 3)}</p>
         <p>{GetGreaterOrLess(5,52)}</p>
@@ -27,15 +35,8 @@ export default function Home() {
       </p>
       <Button className="dark:bg-[#1E6FB8]">
         Read more
-        <svg className="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fillRule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clipRule="evenodd"
-          />
-        </svg>
       </Button>
-    </Card>
+    </Card> */}
         
       </main>
     </div>
