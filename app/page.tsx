@@ -2,6 +2,7 @@ import { Button, Card } from "flowbite-react";
 import Image from "next/image";
 import { GetAskingQuestions, GetGreaterOrLess, GetHelloName, GetMadLib, GetMagic8Ball, GetOddOrEven, GetRestaurant, GetReverseAlpha, GetReverseNum, GetSum } from "./services/DataService"
 import MenuCard from "./components/MenuCard";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
@@ -14,16 +15,16 @@ export default function Home() {
 
         </div>
         <div className="flex flex-wrap gap-x-9 gap-y-6 justify-center mb-5">
-          <MenuCard title="Hello World" description="Enter your name and get back a greeting!" />
-          <MenuCard title="Adding Numbers" description="Enter two numbers and get back the sum of the two numbers!" />
-          <MenuCard title="Asking Questions" description="Enter your name and time you woke up today!" />
+          <MenuCard path="/pages/helloworld" title="Hello World" description="Enter your name and get back a greeting!" />
+          <MenuCard path="/pages/addingnumbers" title="Adding Numbers" description="Enter two numbers and get back the sum of the two numbers!" />
+          {/* <MenuCard title="Asking Questions" description="Enter your name and time you woke up today!" />
           <MenuCard title="Odd or Even" description="Enter a number and see if it’s odd or even! " />
           <MenuCard title="Reverse It (alphanum)" description="Enter a string of characters and see what the reverse string looks like!" />
           <MenuCard title="Reverse It (Numbers)" description="Enter a large number and see the digit order in reverse!" />
           <MenuCard title="MadLib" description="Enter some basic values to generate a unique story!" />
           <MenuCard title="Magic 8 Ball" description="Play with the magic 8 ball by asking it a question!" />
           <MenuCard title="Greater Or Less" description="Play with the CPU to guess it’s generated number! Can you guess it on your first try?" />
-          <MenuCard title="Restaurant Picker" description="Pick a restaurant Category and it will randomly generate a restaurant you should eat at!" />
+          <MenuCard title="Restaurant Picker" description="Pick a restaurant Category and it will randomly generate a restaurant you should eat at!" /> */}
 
         </div>
 

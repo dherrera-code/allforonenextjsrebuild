@@ -4,12 +4,10 @@ import React from 'react'
 interface CardInfo {
   title: string;
   description: string;
-  // Path: string;
+  path: string;
 }
 
-const MenuCard = ({title, description}: CardInfo) => {
-
-
+const MenuCard = ({title, description, path}: CardInfo) => {
 
   return (
     <div >
@@ -20,7 +18,7 @@ const MenuCard = ({title, description}: CardInfo) => {
         <p className="font-normal">
           {description}
         </p>
-        <Button className='mt-15'>
+        <Button className='mt-15' href={path}>
           Play
         </Button>
       </Card>
