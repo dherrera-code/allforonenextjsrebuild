@@ -14,7 +14,7 @@ export default function Home() {
           <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 ">Here are the first 10 applications I learned to create in the CodeStack Academy! These 10 projects are all using API endpoints that I created and hosted via Azure! Please enjoy playing with all of my projects !</p>
 
         </div>
-        <div className="flex flex-wrap gap-x-9 gap-y-6 justify-center mb-5">
+        <div className="flex flex-wrap gap-x-9 gap-y-6 justify-center pb-10">
           <MenuCard path="/pages/helloworld" title="Hello World" description="Enter your name and get back a greeting!" />
           <MenuCard path="/pages/addingnumbers" title="Adding Numbers" description="Enter two numbers and get back the sum of the two numbers!" />
           <MenuCard path="/pages/askingquestions" title="Asking Questions" description="Enter your name and time you woke up today!" />
@@ -27,7 +27,6 @@ export default function Home() {
           <MenuCard path="/pages/restaurantpicker" title="Restaurant Picker" description="Pick a restaurant Category and it will randomly generate a restaurant you should eat at!" />
 
         </div>
-
       </main>
     </div>
   );
