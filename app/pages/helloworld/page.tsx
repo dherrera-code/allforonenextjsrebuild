@@ -15,7 +15,7 @@ export default function HelloWorld() {
     redirect("/")
   }
   const HandleResetBtn = () => {
-
+    setInputValue("");
     setResponse("");
   }
 
@@ -29,7 +29,7 @@ export default function HelloWorld() {
       // console.log(await GetHelloName(inputValue))
       setResponse(await GetHelloName(inputValue));
     }
-    setInputValue("");
+    // setInputValue("");
   }
 
   //Now I need a useEffect to update my response component!
