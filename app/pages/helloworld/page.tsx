@@ -1,7 +1,7 @@
 'use client'
 import ResponseBox from "@/app/components/ResponseBox";
 import { GetHelloName } from "@/app/services/DataService";
-import { Button, Card, TextInput } from "flowbite-react";
+import { Button } from "flowbite-react";
 import { redirect } from "next/navigation";
 import { useState } from "react";
 

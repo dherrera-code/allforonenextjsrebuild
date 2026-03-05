@@ -17,3 +17,6 @@ Components I need to create!
     A bottom component to revert to the home page and reset current page's inputs and response field!
     
 
+### Notes
+Add input validation for adding numbers, oddOrEven
+Add functionality to run functions when the user keydown "Enter" in an input field!
