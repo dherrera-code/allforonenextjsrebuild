@@ -11,12 +11,13 @@ const page = () => {
   const [display, setDisplay] = useState("")
 
   const HandleSubmit = async () => {
-    if(inputValue === null || inputValue === ""){
+    if (inputValue === null || inputValue === "") {
       console.log("Error: please input both fields!")
+      setDisplay("Error: Input a valid number!");
     }
-    else{
+    else {
       // console.log(inputValue + " : " + inputValue2)
-      console.log( await GetOddOrEven(inputValue))
+      console.log(await GetOddOrEven(inputValue))
       setDisplay(await GetOddOrEven(inputValue))
     }
   }
@@ -42,17 +43,17 @@ const page = () => {
         <section className="flex justify-center">
           <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
             <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight">This program can take ANY number and determine whether said number is either odd or even!</h5>
-            <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please enter a number!</p>
+            <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please any number!</p>
             <div className="grid sm:grid-cols-2 place-items-center gap-4">
-              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[13rem] rounded-lg" placeholder="Enter any number!" />
-              
+              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a number!" />
+
               <Button onClick={HandleSubmit} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
             </div>
           </div>
         </section>
-        <ResponseBox response={display}/>
+        <ResponseBox response={display} />
 
-        <section className='flex flex-row gap-5 justify-center flex-wrap pb-5'>
+        <section className='flex flex-row gap-5 sm:gap-55 justify-center flex-wrap pb-5'>
           <Button className='min-w-44' onClick={HandleResetBtn}>Reset</Button>
           <Button className='min-w-44' onClick={BackToHomePage}>Back to Home Page</Button>
         </section>

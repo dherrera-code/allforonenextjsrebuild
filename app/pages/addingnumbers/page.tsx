@@ -15,11 +15,11 @@ const page = () => {
 
   const HandleSubmit = async () => {
     if(inputValue === null || inputValue === "" || inputValue2 === null || inputValue2 ===""){
-      console.log("Error: please input both fields!")
+      setDisplay("Error: Enter two numbers to proceed!")
     }
     else{
       // console.log(inputValue + " : " + inputValue2)
-      console.log( await GetSum(inputValue, inputValue2))
+      setDisplay("Waiting for response!")
       setDisplay(await GetSum(inputValue, inputValue2))
     }
   }
@@ -39,23 +39,23 @@ const page = () => {
       <main className="text-black">
 
         <div className=" py-8 mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Adding Numbers</h1>
+          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Adding Two Numbers</h1>
         </div>
 
         <section className="flex justify-center">
           <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
             <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight">This program can take ANY two numbers and add them together!</h5>
-            <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please enter Two numbers!</p>
+            <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please enter two numbers!</p>
             <div className="grid sm:grid-cols-2 place-items-center gap-4">
-              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[13rem] rounded-lg" placeholder="Enter your first number!" />
-              <input value={inputValue2} onChange={(e) => setInputValue2(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[13rem] rounded-lg" placeholder="Enter your first number!" />
-              <Button onClick={HandleSubmit} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
+              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="number" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter your first number!" />
+              <input value={inputValue2} onChange={(e) => setInputValue2(e.target.value)} type="number" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter your second number!" />
+              <Button onClick={HandleSubmit} className="w-35 md:w-40 lg:w-50 px-5 py-2 sm:col-start-2">Enter</Button>
             </div>
           </div>
         </section>
         <ResponseBox response={display}/>
 
-        <section className='flex flex-row gap-5 justify-center flex-wrap pb-5'>
+        <section className='flex flex-row gap-5 sm:gap-55 justify-center flex-wrap pb-5'>
           <Button className='min-w-44' onClick={HandleResetBtn}>Reset</Button>
           <Button className='min-w-44' onClick={BackToHomePage}>Back to Home Page</Button>
         </section>

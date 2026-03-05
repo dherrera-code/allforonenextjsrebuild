@@ -6,6 +6,10 @@
 
 ### Description: I recreate my All for one project using Next.js; a full stack Framework built on react!
 
+### Link to original build hosted:
+
+https://white-island-0ac32031e.1.azurestaticapps.net/Pages/AddingNumbers.html
+
 ### Notes before creating project!
 
 Create a DataService.js file to grab all my fetches I need!
@@ -18,5 +22,13 @@ Components I need to create!
     
 
 ### Notes
-Add input validation for adding numbers, oddOrEven
+Add input validation for adding numbers(good), oddOrEven
+
 Add functionality to run functions when the user keydown "Enter" in an input field!
+
+Finished pages
+    Hello World
+    Adding Numbers
+    Odd Or Even
+    Asking Questions
+    
