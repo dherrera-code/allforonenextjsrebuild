@@ -33,7 +33,7 @@ const page = () => {
             <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
               <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">Select a Restaurant Category that will generate a restaurant of the respective category!</h5>
               <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center"></p>
-              <div className="grid sm:grid-cols-2 place-items-center gap-4">
+              <div className="grid sm:grid-cols-3 place-items-center gap-4">
                 <Button onClick={() => HandleClick("Burger")} className="w-35 md:w-40 lg:w-50 px-5 py-2">Burger</Button>
                 <Button onClick={() => HandleClick("pizza")} className="w-35 md:w-40 lg:w-50 px-5 py-2">Pizza</Button>
                 <Button onClick={() => HandleClick("misc")} className="w-35 md:w-40 lg:w-50 px-5 py-2">Miscellaneous</Button>
