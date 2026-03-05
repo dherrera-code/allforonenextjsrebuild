@@ -39,7 +39,7 @@ const page = () => {
       <main className="text-black">
 
         <div className=" py-8 mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">Adding Numbers</h1>
+          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Adding Numbers</h1>
         </div>
 
         <section className="flex justify-center">

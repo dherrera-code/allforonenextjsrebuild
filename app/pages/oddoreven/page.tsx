@@ -36,7 +36,7 @@ const page = () => {
       <main className="text-black">
 
         <div className=" py-8 mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">Odd Or Even</h1>
+          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Odd Or Even</h1>
         </div>
 
         <section className="flex justify-center">
@@ -44,7 +44,7 @@ const page = () => {
             <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight">This program can take ANY number and determine whether said number is either odd or even!</h5>
             <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please enter a number!</p>
             <div className="grid sm:grid-cols-2 place-items-center gap-4">
-              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[13rem] rounded-lg" placeholder="Enter a number!" />
+              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[13rem] rounded-lg" placeholder="Enter any number!" />
               
               <Button onClick={HandleSubmit} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
             </div>
