@@ -21,7 +21,7 @@ export default function Home() {
           <MenuCard path="/pages/reversenumber" title="Reverse It (Numbers)" description="Enter a large number and see the digit order in reverse!" />
           <MenuCard path="/pages/madlib" title="MadLib" description="Enter some basic values to generate a unique story!" />
           <MenuCard path="/pages/magic8ball" title="Magic 8 Ball" description="Play with the magic 8 ball by asking it a question!" />
-          <MenuCard path="/pages/greaterorless" title="Greater Or Less" description="Play with the CPU to guess it’s generated number! Can you guess it on your first try?" />
+          <MenuCard path="/pages/greaterorless" title="Greater Or Less" description="Enter two numbers and test whether either number is greater, less than or equal to!" />
           <MenuCard path="/pages/restaurantpicker" title="Restaurant Picker" description="Pick a restaurant Category and it will randomly generate a restaurant you should eat at!" />
         </div>
       </main>

@@ -31,4 +31,8 @@ Finished pages
     Adding Numbers
     Odd Or Even
     Asking Questions
-    
+    BOth reverse it
+    Magic 8 Ball
+    restaurant picker
+    greater or less
+    madlib
