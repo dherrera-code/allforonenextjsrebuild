@@ -1,16 +1,60 @@
-import React from 'react'
+"use client"
+import ResponseBox from '@/app/components/ResponseBox';
+import { GetReverseNum } from '@/app/services/DataService';
+import { Button } from 'flowbite-react';
+import { redirect } from 'next/navigation';
+import React, { useState } from 'react'
 
 const page = () => {
+
+const [inputValue, setInputValue] = useState("");
+  const [response, setResponse] = useState("");
+
+  const BackToHomePage = () => {
+    redirect("/")
+  }
+  const HandleResetBtn = () => {
+    setInputValue("");
+    setResponse("");
+  }
+
+  //create a function to get a response with input validation!
+  const HandleClick = async () => {
+    //Check for value of input field and verify value of input before fetching!
+    if (inputValue === null || inputValue === "") {
+      setResponse("Error: Please enter a sequence of characters!")
+    }
+    else {
+      // setResponse("Thinking of a response!")
+      setResponse(await GetReverseNum(inputValue));
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
       <main className="text-black">
 
-        <div className=" py-8 mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">All for One!</h1>
+       <div className="mx-auto max-w-7xl text-center lg:py-16">
+          <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Reverse It (Numbers Only)</h1>
 
-          <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 ">Here are the first 10 applications I learned to create in the CodeStack Academy! These 10 projects are all using API endpoints that I created and hosted via Azure! Please enjoy playing with all of my projects !</p>
-
+          <section className="flex justify-center">
+            <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
+              <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">This program takes a long number and reverses the order of the number! Please enter a sequence of numbers below!</h5>
+              <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Enter a sequence of numbers!</p>
+              <div className="grid sm:grid-cols-2 place-items-center gap-4">
+                <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a big number!" />
+                <Button onClick={HandleClick} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
+              </div>
+            </div>
+          </section>
         </div>
+
+        <ResponseBox response={response} />
+
+        <section className='flex flex-row gap-5 sm:gap-55 justify-center flex-wrap pb-5'>
+          <Button className='min-w-44' onClick={HandleResetBtn}>Reset</Button>
+          <Button className='min-w-44' onClick={BackToHomePage}>Back to Home Page</Button>
+        </section>
 
       </main>
     </div>
