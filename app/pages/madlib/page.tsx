@@ -30,7 +30,7 @@ const page = () => {
   //create a function to get a response with input validation!
   const HandleClick = async () => {
     if (inputName === "") {
-      setResponse("Please input a number for both values!")
+      setResponse("Please enter all input fields to generate story!")
     }
     else {
       setResponse("Thinking of a response!")
@@ -44,12 +44,12 @@ const page = () => {
       <main className="text-black">
 
         <div className="mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Greater or Less</h1>
+          <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">MadLib</h1>
 
           <section className="flex justify-center">
             <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
-              <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">This program allows the user enter two numbers and the program will compare the two numbers and return the resulting comparison!</h5>
-              <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Please enter two number to be compared!</p>
+              <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">Welcome to my Madlib! Please enter the following inputs and hit the play button to generate your unique story!</h5>
+              <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center"></p>
               <div className="grid sm:grid-cols-2 place-items-center gap-4">
                 <input value={inputName} onChange={(e) => setInputName(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a Name!" />
                 <input value={inputLocation} onChange={(e) => setInputLocation(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a Location!" />
