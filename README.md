@@ -1,6 +1,6 @@
 # Daniel Herrera
 
-## March 2, 2026
+## March 6, 2026
 
 ## All For One NextJs Rebuild!
 
@@ -25,17 +25,7 @@ Components I need to create!
     
 
 ### Notes
-Add input validation for adding numbers(good), oddOrEven
 
 Add functionality to run functions when the user keydown "Enter" in an input field!
 
-Finished pages
-    Hello World
-    Adding Numbers
-    Odd Or Even
-    Asking Questions
-    BOth reverse it
-    Magic 8 Ball
-    restaurant picker
-    greater or less
-    madlib
+### Peer Review :

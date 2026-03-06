@@ -35,7 +35,7 @@ export default function HelloWorld() {
     <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
       <main className="text-black">
         <div className="mx-auto max-w-7xl text-center lg:py-16">
-          <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Hello World!</h1>
+          <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Hello World</h1>
 
           <section className="flex justify-center">
             <div className="max-w-6xl p-6 card-color rounded-lg shadow-md ">
