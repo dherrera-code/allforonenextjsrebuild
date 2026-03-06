@@ -24,7 +24,7 @@ const page = () => {
   //create a function to get a response with input validation!
   const HandleClick = async () => {
     //Check for Number1 of input field and verify Number1 of input before fetching!
-    if (inputNumber1 === null || inputNumber1 === "") {
+    if (inputNumber2 === "" || inputNumber1 === "") {
       setResponse("Please input a number for both values!")
     }
     else {
