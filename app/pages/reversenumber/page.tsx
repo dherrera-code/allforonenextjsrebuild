@@ -25,8 +25,8 @@ const [inputValue, setInputValue] = useState("");
       setResponse("Error: Please enter a sequence of characters!")
     }
     else {
-      // setResponse("Thinking of a response!")
       setResponse(await GetReverseNum(inputValue));
+      setInputValue("");
     }
   }
 

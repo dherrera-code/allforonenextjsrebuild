@@ -27,6 +27,7 @@ const page = () => {
     else {
       // setResponse("Thinking of a response!")
       setResponse(await GetReverseAlpha(inputValue));
+      setInputValue("");
     }
   }
 

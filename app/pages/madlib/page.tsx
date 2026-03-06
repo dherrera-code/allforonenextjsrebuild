@@ -35,6 +35,11 @@ const page = () => {
     else {
       setResponse("Thinking of a response!")
       setResponse(await GetMadLib(inputName, inputLocation, inputAdjective, inputCreature, inputMood));
+      setInputName("")
+      setInputAdjective("")
+      setInputLocation("")
+      setInputCreature("")
+      setInputMood("")
     }
   }
 

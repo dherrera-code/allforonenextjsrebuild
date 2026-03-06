@@ -28,8 +28,9 @@ const page = () => {
       setResponse("Please input a number for both values!")
     }
     else {
-      // setResponse("Thinking of a response!")
       setResponse(await GetGreaterOrLess(inputNumber1, inputNumber2));
+      setInputNumber1("")
+      setInputNumber2("")
     }
   }
 

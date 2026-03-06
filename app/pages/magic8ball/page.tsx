@@ -25,8 +25,8 @@ const page = () => {
       setResponse("Error: Enter a valid question with a question mark!")
     }
     else {
-      // setResponse("Thinking of a response!")
       setResponse(await GetMagic8Ball());
+      setInputValue("")
     }
   }
 

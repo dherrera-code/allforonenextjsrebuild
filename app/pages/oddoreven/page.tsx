@@ -12,13 +12,11 @@ const page = () => {
 
   const HandleSubmit = async () => {
     if (inputValue === null || inputValue === "") {
-      console.log("Error: please input both fields!")
       setDisplay("Error: Input a valid number!");
     }
     else {
-      // console.log(inputValue + " : " + inputValue2)
-      console.log(await GetOddOrEven(inputValue))
       setDisplay(await GetOddOrEven(inputValue))
+      setInputValue("");
     }
   }
 

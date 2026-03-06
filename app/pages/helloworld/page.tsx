@@ -28,6 +28,7 @@ export default function HelloWorld() {
     else {
       // setResponse("Thinking of a response!")
       setResponse(await GetHelloName(inputValue));
+      setInputValue("")
     }
   }
 

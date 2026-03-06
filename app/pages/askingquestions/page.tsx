@@ -10,7 +10,7 @@ const page = () => {
 
 
   const [inputName, setInputName] = useState("");
-  const [inputTime, setInputTime] = useState("06:00");
+  const [inputTime, setInputTime] = useState("");
 
   const [display, setDisplay] = useState("")
 
@@ -20,13 +20,15 @@ const page = () => {
     }
     else {
       setDisplay(await GetAskingQuestions(inputName, inputTime))
+      setInputName("")
+      setInputTime("")
     }
   }
 
   const HandleResetBtn = () => {
     setDisplay("");
     setInputName("");
-    setInputTime("06:30");
+    setInputTime("");
 
   }
 

@@ -21,7 +21,10 @@ const page = () => {
       // console.log(inputValue + " : " + inputValue2)
       setDisplay("Waiting for response!")
       setDisplay(await GetSum(inputValue, inputValue2))
+      setInputValue("");
+      setInputValue2("")
     }
+    
   }
 
   const HandleResetBtn = () => {
