@@ -30,6 +30,11 @@ const page = () => {
       setInputValue("");
     }
   }
+    const HandleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if(event.key === "Enter"){
+        HandleClick();
+      }
+    }
 
   return (
     <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
@@ -43,7 +48,7 @@ const page = () => {
               <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">This program takes a string and reverses the order of the string! Please enter a sequence of character below!</h5>
               <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Enter a sequence of characters!</p>
               <div className="grid sm:grid-cols-2 place-items-center gap-4">
-                <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a word!" />
+                <input value={inputValue} onKeyDown={HandleKeyDown} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a word!" />
                 <Button onClick={HandleClick} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
               </div>
             </div>

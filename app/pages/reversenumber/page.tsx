@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 
 const page = () => {
 
-const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const [response, setResponse] = useState("");
 
   const BackToHomePage = () => {
@@ -30,11 +30,16 @@ const [inputValue, setInputValue] = useState("");
     }
   }
 
+  const HandleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      HandleClick();
+    }
+  }
   return (
     <div className="min-h-screen bg-[#E6E9EE] font-sans dark:bg-[#E6E9EE]">
       <main className="text-black">
 
-       <div className="mx-auto max-w-7xl text-center lg:py-16">
+        <div className="mx-auto max-w-7xl text-center lg:py-16">
           <h1 className="py-8 mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">Reverse It (Numbers Only)</h1>
 
           <section className="flex justify-center">
@@ -42,7 +47,7 @@ const [inputValue, setInputValue] = useState("");
               <h5 className="lg:text-2xl xl:text-4xl font-normal tracking-tight text-left">This program takes a long number and reverses the order of the number! Please enter a sequence of numbers below!</h5>
               <p className="my-6 lg:my-12 lg:text-2xl xl:text-4xl font-normal text-center">Enter a sequence of numbers!</p>
               <div className="grid sm:grid-cols-2 place-items-center gap-4">
-                <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} type="text" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a big number!" />
+                <input value={inputValue} onKeyDown={HandleKeyDown} onChange={(e) => setInputValue(e.target.value)} type="number" className="bg-white ps-4 p-2 w-[16rem] rounded-lg" placeholder="Enter a big number!" />
                 <Button onClick={HandleClick} className="w-35 md:w-40 lg:w-50 px-5 py-2">Enter</Button>
               </div>
             </div>

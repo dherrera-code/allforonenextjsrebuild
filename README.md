@@ -8,7 +8,7 @@
 
 ### Link to original build hosted:
 
-https://white-island-0ac32031e.1.azurestaticapps.net/Pages/AddingNumbers.html
+https://white-island-0ac32031e.1.azurestaticapps.net/index.html
 
 ### Link to Next js rebuild hosted site:
 https://happy-sand-00bb84c1e.1.azurestaticapps.net
