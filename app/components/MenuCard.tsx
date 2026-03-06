@@ -11,14 +11,14 @@ const MenuCard = ({title, description, path}: CardInfo) => {
 
   return (
     <div >
-      <Card className="max-w-[324px] h-auto card-color rounded-lg shadow-md border-0">
+      <Card className="max-w-[324px] h-[100%] card-color rounded-lg shadow-md border-0">
         <h5 className="text-2xl text-center">
           {title}
         </h5>
         <p className="font-normal">
           {description}
         </p>
-        <Button className='mt-15' href={path}>
+        <Button className='mt-15 mx-auto w-[230px]' href={path}>
           Play
         </Button>
       </Card>
