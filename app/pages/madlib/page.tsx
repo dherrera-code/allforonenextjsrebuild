@@ -29,15 +29,15 @@ const page = () => {
 
   //create a function to get a response with input validation!
   const HandleClick = async () => {
-    if (inputName === "") {
+    if (inputName === "" || inputAdjective === "" || inputLocation === "" || inputCreature === ""|| inputMood === "") {
       setResponse("Please enter all input fields to generate story!")
     }
     else {
       setResponse("Thinking of a response!")
       setResponse(await GetMadLib(inputName, inputLocation, inputAdjective, inputCreature, inputMood));
-      setInputName("")
-      setInputAdjective("")
-      setInputLocation("")
+      await setInputName("")
+      await setInputAdjective("")
+      await setInputLocation("")
       setInputCreature("")
       setInputMood("")
     }
